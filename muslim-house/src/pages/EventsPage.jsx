@@ -325,21 +325,24 @@ export default function EventsPage() {
                 </a>
               </div>
 
-              {/* Right: Visual */}
-              <div className="bg-emerald-deep relative overflow-hidden flex items-center justify-center p-8 md:p-10">
-                <div className="absolute inset-0 geometric-pattern opacity-15" />
-                <div className="relative text-center">
-                  <p className="font-heading text-6xl md:text-7xl text-gold font-bold mb-2">APR</p>
-                  <p className="font-heading text-8xl md:text-9xl text-white font-bold leading-none mb-2">19</p>
-                  <p className="text-white/70 text-lg mb-4">Saturday, 2:00 PM</p>
-                  <div className="w-16 h-0.5 bg-gold mx-auto mb-4" />
-                  <p className="text-gold font-heading text-xl font-bold mb-2">A Celebration</p>
-                  <p className="text-gold font-heading text-xl font-bold mb-4">of the People</p>
-                  <div className="flex flex-wrap justify-center gap-2 mt-4">
-                    <span className="bg-white/10 text-white/80 text-[10px] px-3 py-1 rounded-full">Detroit</span>
-                    <span className="bg-white/10 text-white/80 text-[10px] px-3 py-1 rounded-full">Flint</span>
-                    <span className="bg-white/10 text-white/80 text-[10px] px-3 py-1 rounded-full">Cleveland</span>
-                    <span className="bg-white/10 text-white/80 text-[10px] px-3 py-1 rounded-full">Chicago</span>
+              {/* Right: Event photo with overlay */}
+              <div className="relative overflow-hidden min-h-[400px] lg:min-h-full">
+                <img
+                  src="/photos/celebration-gathering.jpg"
+                  alt="Community gathering at The Muslim House"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-emerald-deep/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+                  <p className="font-heading text-5xl md:text-6xl text-gold font-bold mb-1">APR 19</p>
+                  <p className="text-white text-lg font-medium mb-3">Saturday, 2:00 PM</p>
+                  <div className="w-12 h-0.5 bg-gold mx-auto mb-3" />
+                  <p className="text-gold font-heading text-lg font-bold">A Celebration of the People</p>
+                  <div className="flex flex-wrap justify-center gap-2 mt-3">
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] px-3 py-1 rounded-full">Detroit</span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] px-3 py-1 rounded-full">Flint</span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] px-3 py-1 rounded-full">Cleveland</span>
+                    <span className="bg-white/20 backdrop-blur-sm text-white text-[10px] px-3 py-1 rounded-full">Chicago</span>
                   </div>
                 </div>
               </div>
