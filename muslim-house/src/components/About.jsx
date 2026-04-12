@@ -79,8 +79,8 @@ export default function About() {
             <div className="relative">
               <div className="flex flex-col md:flex-row items-start gap-8">
                 <img
-                  src="/photos/imam-award.jpg"
-                  alt="Imam Hanafi Abdul-Malik receiving an award"
+                  src="/photos/imam-portrait.jpg"
+                  alt="Imam Hanafi Abdul-Malik"
                   className="w-24 h-24 md:w-32 md:h-32 rounded-2xl object-cover flex-shrink-0"
                 />
                 <div>
