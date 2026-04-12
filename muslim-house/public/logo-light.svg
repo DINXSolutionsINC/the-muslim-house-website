@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="660" viewBox="0 0 400 330" xmlns="http://www.w3.org/2000/svg">
+  <!-- House body -->
+  <rect x="120" y="130" width="160" height="130" fill="#1B4332" rx="2"/>
+  <!-- Roof -->
+  <polygon points="100,132 200,50 300,132" fill="#1B4332"/>
+  <!-- Chimney -->
+  <rect x="250" y="68" width="20" height="44" fill="#1B4332"/>
+  <!-- Door opening -->
+  <rect x="165" y="180" width="70" height="80" rx="3" fill="#F5F1EB"/>
+  <!-- Bold sujood figure - solid filled silhouette -->
+  <g transform="translate(173, 216)">
+    <path d="M6,18 C6,12 10,4 18,2 C24,0.5 32,2 38,6 C42,8.5 46,12 48,16 L48,20 C44,16 40,12 36,10 C30,7 24,5.5 18,7.5 C12,9.5 8,14 6,18 Z" fill="#1B4332"/>
+    <circle cx="4" cy="20" r="4.5" fill="#1B4332"/>
+    <path d="M8,18 C10,15 13,14 16,14.5 L16,17 C13,16.5 10,17.5 8,20 Z" fill="#1B4332"/>
+    <path d="M42,14 C46,12 50,13 52,16 L52,20 L46,20 C46,17 44,15 42,14 Z" fill="#1B4332"/>
+    <ellipse cx="52" cy="18" rx="4" ry="3" fill="#1B4332"/>
+    <line x1="0" y1="24" x2="56" y2="24" stroke="#1B4332" stroke-width="1" opacity="0.3"/>
+  </g>
+  <!-- Window left -->
+  <rect x="134" y="152" width="22" height="22" rx="2" fill="#F5F1EB"/>
+  <!-- Window right -->
+  <rect x="244" y="152" width="22" height="22" rx="2" fill="#F5F1EB"/>
+  <!-- Crescent -->
+  <g transform="translate(186, 22)">
+    <circle cx="14" cy="14" r="11" fill="#C6973B"/>
+    <circle cx="18.5" cy="12" r="9" fill="#1B4332"/>
+  </g>
+  <!-- Star -->
+  <g transform="translate(212, 14)">
+    <polygon points="7,0 8.8,5.2 14,5.2 9.8,8.2 11.4,14 7,10.5 2.6,14 4.2,8.2 0,5.2 5.2,5.2" fill="#C6973B"/>
+  </g>
+  <!-- Text -->
+  <text x="200" y="292" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="500" fill="#1B4332" letter-spacing="3">THE MUSLIM HOUSE</text>
+  <text x="200" y="316" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#6B7B6E" letter-spacing="2">EST. 1995 · FLINT, MICHIGAN</text>
+</svg>

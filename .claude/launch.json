@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "muslim-house-dev",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": ["start-dev.sh"],
+      "port": 5173,
+      "cwd": "muslim-house"
+    }
+  ]
+}
