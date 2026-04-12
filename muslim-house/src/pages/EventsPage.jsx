@@ -446,9 +446,9 @@ export default function EventsPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 fade-up">
             {[
-              { src: '/photos/imam-award.jpg', alt: 'Imam Abdul-Malik receiving recognition' },
-              { src: '/photos/umflint-group.jpg', alt: 'Community members at UM-Flint' },
-              { src: '/photos/community-interior.jpg', alt: 'Inside The Muslim House' },
+              { src: '/photos/building-front-brothers.jpg', alt: 'Brothers in front of The Muslim House at 804 MLK Ave' },
+              { src: '/photos/backpack-giveaway.jpg', alt: 'Kids at TMH backpack giveaway' },
+              { src: '/photos/prayer-room-panorama.jpg', alt: 'Inside the prayer room at The Muslim House' },
               { src: '/photos/sisters-selfie.jpg', alt: 'Community sisters' },
               { src: '/photos/event-1.jpg', alt: 'Community event' },
               { src: '/photos/community-gathering.jpg', alt: 'Community gathering' },
