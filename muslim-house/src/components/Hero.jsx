@@ -2,41 +2,39 @@ import { useEffect, useRef } from 'react'
 import { usePrayerTimes } from '../hooks/usePrayerTimes'
 
 export default function Hero() {
-  const { nextPrayer, countdown, times } = usePrayerTimes()
-  const parallaxRef = useRef(null)
+  const { nextPrayer, countdown } = usePrayerTimes()
+  const videoRef = useRef(null)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrolled = window.scrollY
-        const heroHeight = parallaxRef.current.parentElement?.offsetHeight || 800
-        if (scrolled < heroHeight) {
-          parallaxRef.current.style.transform = `translateY(${scrolled * 0.3}px)`
-        }
-      }
+    // Ensure video plays on mount
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
     }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background layers */}
-      <div ref={parallaxRef} className="absolute inset-0 bg-emerald-deep">
-        <div className="absolute inset-0 geometric-pattern opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-deep/60 via-emerald-deep/80 to-emerald-deep" />
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Video background */}
+      <div className="absolute inset-0">
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
       </div>
 
-      {/* Animated floating shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gold/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-gold/10 rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-gold/5 rounded-full" />
-      </div>
+      {/* Gradient overlay: transparent left → solid right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/10 via-emerald-deep/50 to-emerald-deep/95" />
+      {/* Additional top/bottom fade for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-emerald-deep/40 via-transparent to-emerald-deep/70" />
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto">
+      {/* Content — left aligned */}
+      <div className="relative z-10 px-6 sm:px-10 lg:px-16 max-w-3xl ml-auto mr-8 md:mr-16 lg:mr-24">
         {/* Bismillah */}
         <p className="font-arabic text-gold text-2xl sm:text-3xl md:text-4xl mb-6 opacity-0 animate-[fadeInDown_1s_0.3s_forwards]">
           بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
@@ -47,7 +45,7 @@ export default function Hero() {
           <span className="block text-gold">Faith, Fellowship, and Action</span>
         </h1>
 
-        <p className="text-white/70 text-lg sm:text-xl md:text-2xl font-light max-w-2xl mx-auto mb-4 opacity-0 animate-[fadeInUp_1s_0.9s_forwards]">
+        <p className="text-white/80 text-lg sm:text-xl md:text-2xl font-light max-w-xl mb-4 opacity-0 animate-[fadeInUp_1s_0.9s_forwards]">
           Since 1995, The Muslim House has been a place of worship, service, and belonging
           in Flint, Michigan — rooted in Islamic principles and open to all.
         </p>
@@ -72,7 +70,7 @@ export default function Hero() {
         )}
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-[fadeInUp_1s_1.5s_forwards]">
+        <div className="flex flex-col sm:flex-row items-start gap-4 opacity-0 animate-[fadeInUp_1s_1.5s_forwards]">
           <a
             href="#about"
             className="bg-gold hover:bg-gold-light text-emerald-deep px-8 py-4 rounded-full text-base font-bold transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:-translate-y-0.5"
