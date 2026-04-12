@@ -28,13 +28,13 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* Gradient overlay: transparent left → solid right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/10 via-emerald-deep/50 to-emerald-deep/95" />
+      {/* Gradient overlay: solid left → transparent right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-deep/95 via-emerald-deep/50 to-emerald-deep/10" />
       {/* Additional top/bottom fade for text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-deep/40 via-transparent to-emerald-deep/70" />
 
       {/* Content — left aligned */}
-      <div className="relative z-10 px-6 sm:px-10 lg:px-16 max-w-3xl ml-auto mr-8 md:mr-16 lg:mr-24">
+      <div className="relative z-10 px-6 sm:px-10 lg:px-16 max-w-3xl mr-auto">
         {/* Bismillah */}
         <p className="font-arabic text-gold text-2xl sm:text-3xl md:text-4xl mb-6 opacity-0 animate-[fadeInDown_1s_0.3s_forwards]">
           بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
