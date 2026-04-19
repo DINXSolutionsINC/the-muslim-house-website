@@ -481,7 +481,7 @@ export default function EventsPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://www.facebook.com/The-Muslim-House-148159981880787/"
+              href="https://www.facebook.com/share/g/1KxpbRQ8uC/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gold hover:bg-gold-light text-emerald-deep px-8 py-4 rounded-full font-bold transition-all duration-300 hover:shadow-xl hover:shadow-gold/25"
