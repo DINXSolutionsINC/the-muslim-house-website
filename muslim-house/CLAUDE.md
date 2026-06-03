@@ -98,15 +98,23 @@ npm run build        # production bundle in dist/
 
 ## Deploying to production
 
-You need Netlify CLI auth (the maintainer will add you to the team):
+Deploys are manual via the Netlify CLI using a **shared auth token** (you'll receive
+this token privately from the maintainer — it is NOT stored in this repo, since the
+repo is public). Set it as an environment variable, then deploy:
 
 ```bash
 cd muslim-house
 npm run build
-npx netlify deploy --dir=dist --prod --message="your change description"
+export NETLIFY_AUTH_TOKEN="<token shared with you privately>"
+npx netlify deploy --dir=dist --prod --site=c3f19565-6934-4ca0-b01d-504b42677c93 --message="your change description"
 ```
 
-Or trigger via git: any push to `main` does NOT auto-deploy yet (no GitHub integration set up on Netlify). Deploys are manual via CLI for now.
+The `--site` flag targets the `the-muslim-house-flint` project so you don't need to
+run `netlify link`. **Never commit the token** — keep it in your shell env or a local
+`.env` that is gitignored.
+
+Note: any push to `main` does NOT auto-deploy (no GitHub integration set up on Netlify).
+Deploys are manual via CLI.
 
 ## Git workflow
 
