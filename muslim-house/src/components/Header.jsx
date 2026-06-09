@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Programs', href: '#services' },
   { label: 'Events', href: '/events', isRoute: true },
+  { label: 'Shop', href: 'https://shop.themuslimhouseflint.org' },
   { label: 'Donate', href: '#donate' },
   { label: 'Contact', href: '#contact' },
 ]
